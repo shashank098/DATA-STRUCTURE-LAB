@@ -1,2 +1,0 @@
-# DATA-STRUCTURE-LAB
-By: Shashank Kumar 1BM18CS098

@@ -1,0 +1,53 @@
+#include <stdio.h>
+#include<conio.h>
+#include<stdlib.h>
+#include<math.h>
+#define STACK_SIZE 60
+void push(int[],int*);
+void pop(int[],int*);
+void main()
+{
+ int stack[STACK_SIZE],x,top=-1;
+ do
+  {
+   printf("Enter Your Choice :\n 1. Put clothes in the cupboard \n 2 Remove clothes from the cupboard\n*To exit please presssome other value\n");
+   scanf("%d",&x);
+   switch(x)
+   {
+     case 1: push(stack,&top);
+             break;
+     case 2: pop(stack,&top);
+             break;
+   }
+  }
+  while(x==1||x==2);
+}
+
+void push (int stack[STACK_SIZE],int*top)
+{
+    int element;
+    if(*top==STACK_SIZE)
+    {
+        printf("Cupboard is full");
+    }
+    else
+    {
+        printf("Enter the element u need to insert in the cupboard\n");
+        scanf("%d",&element);
+        stack[++(*top)]=element;
+        printf("The elements inserted in the cupboard is %d\n", element);
+    }
+}
+
+void pop(int stack[STACK_SIZE],int *top)
+{
+    int element;
+    if(*top==-1)
+    printf("Cupboars is empty");
+    else
+    {
+     element=stack[*top];
+     (*top)--;
+     printf("The element removed from the cupboard if %d\n",element);
+    }
+}

@@ -36,11 +36,9 @@ int queue[maxsize];
         }
     }
 }
-void insert()
+void insert(int queue[],int *front, int *rear)
 {
     int item;
-    int front = -1, rear = -1;
-    int queue[maxsize];
     printf("\nEnter the element\n");
     scanf("\n%d",&item);
     if(rear == maxsize-1)
@@ -61,11 +59,9 @@ void insert()
     printf("\nValue inserted ");
 
 }
-void delete()
+void delete(int queue[],int *front, int *rear)
 {
     int item;
-    int front = -1, rear = -1;
-    int queue[maxsize];
     if (front == -1 || front > rear)
     {
         printf("\nUNDERFLOW\n");
@@ -90,11 +86,9 @@ void delete()
 
 }
 
-void display()
+void display(int queue[],int *front, int *rear)
 {
     int i;
-    int front = -1, rear = -1;
-    int queue[maxsize];
     if(rear == -1)
     {
         printf("\nEmpty queue\n");

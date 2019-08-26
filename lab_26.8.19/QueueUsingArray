@@ -20,13 +20,13 @@ int queue[maxsize];
         switch(choice)
         {
             case 1:
-            insert();
+            insert(int queue[],int *front, int *rear);
             break;
             case 2:
-            delete();
+            delete(int queue[],int *front, int *rear);
             break;
             case 3:
-            display();
+            display(int queue[],int *front, int *rear);
             break;
             case 4:
             exit(0);

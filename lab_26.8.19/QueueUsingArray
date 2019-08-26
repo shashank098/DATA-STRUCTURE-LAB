@@ -39,6 +39,8 @@ int queue[maxsize];
 void insert()
 {
     int item;
+    int front = -1, rear = -1;
+    int queue[maxsize];
     printf("\nEnter the element\n");
     scanf("\n%d",&item);
     if(rear == maxsize-1)
@@ -62,6 +64,8 @@ void insert()
 void delete()
 {
     int item;
+    int front = -1, rear = -1;
+    int queue[maxsize];
     if (front == -1 || front > rear)
     {
         printf("\nUNDERFLOW\n");
@@ -89,6 +93,8 @@ void delete()
 void display()
 {
     int i;
+    int front = -1, rear = -1;
+    int queue[maxsize];
     if(rear == -1)
     {
         printf("\nEmpty queue\n");

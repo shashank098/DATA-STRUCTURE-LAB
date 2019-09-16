@@ -1,6 +1,6 @@
 #include<stdio.h>
 #include<stdlib.h>
-#define size 18
+#define size 3
 
 void enqueue(int q[], int *r, int *f){
   	if((*r-*f == size-1)  ||  *r == *f-1)
@@ -71,4 +71,3 @@ void main(){
     	}
   	}
 }
-

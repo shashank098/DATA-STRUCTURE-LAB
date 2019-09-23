@@ -94,7 +94,8 @@ void display(NODE head)
 	NODE p;
 	if(head==NULL)
 	{
-		printf("List is Empty\n");
+		printf("Lases the compilation time.
+uses an internal non-standard header file of the GNU C++ library, and so will not compile in MSVC, XCode, and many otheist is Empty\n");
 		exit(0);
 	}
 	p=head;
@@ -108,23 +109,24 @@ int main()
 {
 	NODE head=NULL;
 	int ch,item,pos;
-	printf("enter\n1.Insert in the Front\n2.Insert at a Position\n3.Insert at the End\n4.Display\n-1.Exit\n");
+	printf("-----------------------------------------\n");
+	printf("Enter\n1.Insert in the Front\n2.Insert at a Position\n3.Insert at the End\n4.Display\n-1.Exit\n");
 	scanf("%d",&ch);
 	while(ch!=-1)
 	{
 		switch(ch)
 		{
-			case 1:printf("Enter the item\n");
+			case 1:printf("Enter the Item\n");
 				scanf("%d",&item);
 				head=insert_front(item,head);
 				break;
-			case 2:printf("Enter the item\n");
+			case 2:printf("Enter the Item\n");
 				scanf("%d",&item);
-				printf("Enter the position\n");
+				printf("Enter the Position\n");
 				scanf("%d",&pos);
 				head=insert_pos(head,item,pos);
 				break;
-			case 3:printf("Enter the item\n");
+			case 3:printf("Enter the Item\n");
 				scanf("%d",&item);
 				head=insert_end(head,item);
 				break;

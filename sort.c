@@ -77,13 +77,33 @@ node sort(node first){
 		return first;
 	}
 
+ node reverse(node first) 
+    { 
+        
+        node current = first; 
+        node prev = NULL, next = NULL; 
+  
+        while (current != NULL) { 
+            
+            next = current->next; 
+  
+            
+            current->next = prev; 
+  
+            
+            prev = current; 
+            current = next; 
+        } 
+        first = prev; 
+        return first;
+    } 
 void main()
 {
   node first1 = NULL , first2 = NULL , curr = NULL;
   int ch = 0 , item = 0;
   while(1)
   {
-    printf("\nEnter your choice :\n1.Insert elements in list1\n2.Insert elements in list2\n3.Concatenate two lists\n4.Sort the list\n5.Exit\n");
+    printf("\nEnter your choice :\n1.Insert elements in list1\n2.Insert elements in list2\n3.Concatenate two lists\n4.Sort the list\n5.Reverse a string\n6.Exit\n");
     scanf("%d",&ch);
     switch(ch)
     {
@@ -113,12 +133,19 @@ void main()
                  curr = curr->next;
                }
                break;
-      case 5 : exit(0);
+      case 5 : first1 = reverse(first1);
+               curr = first1;
+               printf("\nThe elements after reversing is\n");
+               while(curr != NULL)
+               {
+                 printf("%d\t",curr->data);
+                 curr = curr->next;
+               }
+               break;
+      
+      case 6 : exit(0);
       default : printf("\nInvalid choice");
                 break;
     }
   }
 }
-
-
-   
